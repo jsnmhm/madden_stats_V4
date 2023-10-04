@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.css" />
+    <link rel="stylesheet" href="static\css\style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>    
+</head>
+<body>
+    <table width="80%">
+        <tr>
+            <td colspan=2 style="padding:10px">
+                <b>NFL Statistics Data</b>
+            </td>
+        </tr>
+        <tr rowspan=4>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <div>
+                                <img id="player1Image" src="https://a.espncdn.com/i/headshots/nfl/players/full/15847.png" width=250 height=auto/>        
+                            </div>
+                        </td>
+                        <td align="left">
+                            <div id="playerDetails">
+                    
+                                <h3>Player Details</h3>
+                                <!-- Player Details content here -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select id="selSkill" onchange="skillChanged(this.value)"></select>
+                <div style="width:500px" id="posBoxChart"></div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-md-5">
+                <select id="selTeam" onchange="teamChanged(this.value)"></select>
+                <div id="teamBarChart"></div>
+                <select id="selPlayer1" onchange="player1Changed(this.value)"></select>
+                
+                </div>
+        </td> 
+                            
+        </tr>  
+        <tr>
+            <td>
+                <div class="container">
+                    <!-- Player list on the right -->
+                    <div class="col-md-7">
+                        <h3>Player List</h3>
+                        <ul id="playerList">
+                            <!-- Player list items here -->
+                            player detail
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>          
+    </table>    
+</body>
+</html>
+
+

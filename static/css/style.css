@@ -1,0 +1,63 @@
+/* Style for the jersey number */
+.jersey-number {
+    font-weight: bold;
+    color: #252322; /* Change the color as desired */
+    margin-right: 10px; /* Add spacing between jersey number and name */
+}
+
+/* CSS for Player List */
+#playerList {
+    /* Add other styles as needed */
+    column-count: 3; /* Divide the list into two columns */
+    column-gap: 100px; /* Add some space between columns */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#playerList li {
+    width: 150%; /* Adjust the width as needed */
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+
+#playerList li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#playerList li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Style for the Player Details section */
+#playerDetails {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* Add rounded corners */
+    text-align: left; /* Center text content */
+}
+
+#playerDetails h3 {
+    margin-top: 0;
+    font-size: 24px; /* Increase the font size */
+    color: #333; /* Change the text color */
+    margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+#playerDetails p {
+    margin: 5px 0; /* Add spacing between paragraphs */
+    font-size: 16px; /* Adjust the font size */
+    color: #666; /* Change the text color */
+}
