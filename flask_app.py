@@ -15,6 +15,30 @@ team_colors = {"Ravens": (26, 25, 95), "Bengals": (251, 79, 20), "Browns": (49, 
                "Cardinals": (151, 35, 63), "Rams": (0, 53, 148), "49ers": (170, 0, 0),
                "Seahawks": (0, 34, 68), "Bears": (11, 22, 42)}
 
+team_alt_color = {"Ravens": "#9a7611", "Bengals": "#000000", "Browns": "#ff3c00",
+                  "Steelers": "#000000", "Bills": "#d50a0a", "Dolphins": "#f0651d",
+                  "Patriots": "#c60c30", "Jets": "#ffffff", "Texans": "#c41230", 
+                  "Colts": "#ffffff", "Jaguars": "#d7a22a", "Titans": "#002a5c",
+                  "Broncos": "#0a2343", "Chiefs": "#ffb612", "Raiders": "#a5acaf", 
+                  "Chargers": "#ffc20e", "Lions": "#bbbbbb", "Packers": "#ffb612",
+                  "Vikings": "#ffc62f", "Cowboys": "#b0b7bc", "Giants": "#c9243f",
+                  "Eagles": "#a5acaf", "Commanders": "#ffb612", "Falcons": "#000000", 
+                  "Panthers": "#000000", "Saints": "#000000", "Buccaneers": "#3e3a35", 
+                  "Cardinals": "#ffffff", "Rams": "#ffd100", "49ers": "#b3995d",
+                  "Seahawks": "#69be28", "Bears": "#fb4f14"}
+
+team_abbr = {"Ravens": "BAL", "Bengals": "CIN", "Browns": "CLE",
+               "Steelers": "PIT", "Bills": "BUF", "Dolphins": "MIA",
+               "Patriots": "NE", "Jets": "NYJ", "Texans": "HOU", 
+               "Colts": "IND", "Jaguars": "JAX", "Titans": "TEN",
+               "Broncos": "DEN", "Chiefs": "KC", "Raiders": "LV", 
+               "Chargers": "LAC", "Lions": "DET", "Packers": "GB",
+               "Vikings": "MIN", "Cowboys": "DAL", "Giants": "NYG",
+               "Eagles": "PHI", "Commanders": "WSH", "Falcons": "ATL", 
+               "Panthers": "CAR", "Saints": "NO", "Buccaneers": "TB", 
+               "Cardinals": "ARI", "Rams": "LAR", "49ers": "SF",
+               "Seahawks": "SEA", "Bears": "CHI"}
+
 
 
 app = Flask(__name__)
@@ -40,6 +64,8 @@ def create_dict(data):
             #dictionary, get value and add "team_color" to row_dict
             if (column_names[i] == "team"):
                 row_dict["team_color"] = team_colors[row_dict["team"]]
+                row_dict["team_abbr"] = team_abbr[row_dict["team"]]
+                row_dict["team_alt_color"] = team_alt_color[row_dict["team"]]
         result.append(row_dict)        
 
     return result
@@ -49,9 +75,11 @@ all_results = create_dict(rows)
 
 
 
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+    #return render_template("index.html")
+    return render_template("index-btstrp.html")
 
 @app.route("/data")
 def data():

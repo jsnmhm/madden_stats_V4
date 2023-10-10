@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.css" />
+    <link rel="stylesheet" href="static\css\style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <div class="container-fluid pt-100 mx-auto">
+        <div id="headerBG" class="row">
+
+            
+            <div id="player1BG" class="col-3">
+                <select id="selPlayer1" onchange="player1Changed(this.value)"></select>
+                <img  id="player1Image" src="" width="auto" height="auto"/>
+            </div>
+            
+            <div class="col-6">
+                <div id="playerDetails" class="float-start">
+                    <h3>Player Details</h3>
+                </div>
+            </div>
+            
+            <div id="teamLogoBG" class="col-3">                
+                <img id="teamLogo" class="align-items-end" src="" width="auto" height="auto"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <!-- <select class="demo-default" id="selTeam" onchange="teamChanged(this.value)"></select> -->
+                <div id="teamBarChart">                    
+                </div>
+            </div>
+            <div class="col-4">
+                <row>
+                    <div class="float-start">
+                        <p id="teamRosterLabel" class="display-1"><b>Team Roster:</b></select></p>
+                    </div>
+                    <select class="demo-default" id="selTeam" onchange="teamChanged(this.value)"></select>
+                </row> 
+                <ul  id="playerList">
+                </ul>
+            </div>            
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <select id="selSkill" onchange="skillChanged(this.value)"></select>
+                <div style="width: 700px" id="posBoxChart"></div>                   
+            </div>
+
+            
+            
+            <div class="col-5">
+                <div id="compBar">
+                </div>
+            </div>
+
+            <div class="col-1">
+                <p class="display-6"><b>Select Stats to Compare</b></p>
+                <select id="selStatComp" class="selectpicker" multiple aria-label="size 3 select example" onchange="statChanged(this.value)"></select>                  
+            </div>
+            
+            <div class="col-2 card">
+                <p class="card-title display-6"><b>Select a Player to Compare</b></p>
+                <img class="card-img-top rounded float-start" id="player2Image" src="" width="auto" height="auto"/>
+                <div class="card-body">
+                    <!-- <h3 class="card-title">Select a Player to Compare</h5> -->
+                        <select id="selPlayer2" onchange="player2Changed(this.value)"></select>
+                        <div id="playerDetails2"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+    </div>
+
+    <!-- <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div> -->
+    
+</body>
+</html>

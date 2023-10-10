@@ -1,63 +1,279 @@
+
+
+.selectize-control .selectize-input {
+    width: 500px;
+    height: 50px;
+    line-height: 30px;
+}
+
+.selectize-control.single .selectize-input {
+    font-size: 30px;
+    height: 70px;
+    width: 500px;
+    line-height: 30px;
+}
+
+.selectize-control.multi .selectize-input {
+    font-size: 30px;
+    height: auto;
+    width: 250px;
+    overflow-y: auto;
+    line-height: 30px;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+    padding-bottom: 8px;
+    line-height: 30px;
+}
+
+/* Styling for dropdown content */
+.selectize-dropdown-content {
+    height: auto;
+    width: 500px;
+    overflow-y: auto;
+    font-size: 40px;
+    padding: 15px;
+    line-height: 40px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+
+#headerBG {
+    background-color: 3e3a35;
+}
+
+#teamLogo {
+    float: right;
+}
+
+#player1Image {
+    vertical-align:bottom;
+    border:0;
+}
+
+#teamRosterLabel {
+    padding-right: 15px;
+}
+
+/*
+#teamLogoBG {
+    background-color: #a71930;
+}
+*/
+
+#player1BG {
+    float: left;
+}
+
 /* Style for the jersey number */
 .jersey-number {
     font-weight: bold;
-    color: #252322; /* Change the color as desired */
-    margin-right: 10px; /* Add spacing between jersey number and name */
+    color: #252322; 
+    margin-right: 10px; 
 }
 
 /* CSS for Player List */
 #playerList {
-    /* Add other styles as needed */
-    column-count: 3; /* Divide the list into two columns */
-    column-gap: 100px; /* Add some space between columns */
-    list-style-type: none; /* Remove bullet points */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 30px;
+    margin-left: 20px;
+    max-height: 700px;
+    overflow-y: auto;
+    width: 150%; 
+    border: 1px solid #ccc; 
+    height: 500px;
 }
 
 #playerList li {
-    width: 150%; /* Adjust the width as needed */
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-
-
-#playerList li {
+    flex: 0 0 calc(33.33% - 10px); 
     padding: 10px;
     border: 1px solid #ddd;
     margin-bottom: 5px;
     cursor: pointer;
+    font-size: 40px;
 }
 
 #playerList li:hover {
     background-color: #f0f0f0;
-}
+} 
+
 
 
 /* Style for the Player Details section */
 #playerDetails {
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #ccc;
     margin-top: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px; /* Add rounded corners */
-    text-align: left; /* Center text content */
+    border-radius: 5px; 
+    text-align: left; 
+    width: 500px;
+    float: left;
 }
 
 #playerDetails h3 {
     margin-top: 0;
-    font-size: 24px; /* Increase the font size */
-    color: #333; /* Change the text color */
-    margin-bottom: 10px; /* Add spacing below the heading */
+    font-size: 38px; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+#playerDetails h4 {
+    margin-top: 0;
+    font-size: 29px; 
+    color: #333; 
+    margin-bottom: 10px; 
 }
 
 #playerDetails p {
-    margin: 5px 0; /* Add spacing between paragraphs */
-    font-size: 16px; /* Adjust the font size */
-    color: #666; /* Change the text color */
+    margin: 5px 0; 
+    font-size: 25px; 
+    color: #666; 
 }
+
+#playerDetails2 {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+    text-align: left; 
+    width: 500px;
+    float: left;
+}
+
+#playerDetails2 h3 {
+    margin-top: 0;
+    font-size: 38px; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+#playerDetails2 h4 {
+    margin-top: 0;
+    font-size: 29px; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+#playerDetails2 p {
+    margin: 5px 0; 
+    font-size: 25px; 
+    color: #666; 
+}
+
+
+
+    /* Example CSS styles, customize as needed */
+    /* body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    table {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    } */
+
+   /* select {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }*/
+
+   /* .container {
+        display: flex;
+        justify-content: space-between;
+    }*/
+
+    /* .col-md-5 {
+        width: 40%;
+    }
+
+    .col-md-7 {
+        width: 58%;
+    } */
+
+    /* Ensure charts are side by side */
+    /* #charts-container {
+        display: flex;
+        flex-direction: row; 
+    } */
+    
+    /*.column {
+        flex: 1;
+        padding: 10px;
+    }*/
+    
+    /* Ensure charts are side by side */
+    /* #charts-container {
+        display: flex;
+        flex-direction: row; 
+    } */
+
+    /* Align content to the left within the columns */
+    /* .column {
+        flex: 1;
+        padding: 10px;
+        text-align: left; 
+    } */
+    
+    /* Adjust styles for the elements you want to move */
+    /* #charts-container h3,
+    /* Remove margin to the left */
+    /*#charts-container select,
+    #charts-container #teamBarChart {
+        margin-left: -500px; 
+    } */
+    
+
+    /* Add borders to playerList, teamBarChart, and playerDetails */
+    /* Add rounded corners */
+    /* Add a 1px solid border with a light gray color */
+    /* Add padding to create some space between the content and the border */
+    /* Add margin to separate these elements */
+/* #playerList, #teamBarChart{
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin: 10px; 
+} */
+
+/* Adjust the minimum height of the teamBarChart */
+/* #teamBarChart {
+    min-height: 420px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+} */
+
